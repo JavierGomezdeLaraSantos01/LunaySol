@@ -1,0 +1,194 @@
+:root{
+    --moradoFondo:#3A0983;
+    --violetaClaro:#AE4BD1;
+    --vielotaMasClaro:#c356eb;
+    --azulOscuro:#12097D;
+}
+@font-face {
+    font-family: Merienda;
+    src: url('../media/fonts/Merienda-Regular.ttf');
+}
+@font-face {
+    font-family: EduQLD;
+    src: url('../media/fonts/EduQLDBeginner-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(.2rem);
+    font-family: Merienda;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    box-shadow: rgba(0,0,0,.24) 0px 3px 8px;
+    filter: brightness(120%);
+}
+.imgLogo{
+    width: 4rem;
+    height: 5rem;
+    margin: 1rem;
+}
+.barraNavegacion{
+    display: flex;
+    align-items: center;
+
+}
+.lista-navegacion{
+    margin: 0rem 2rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.imgLogo{
+    filter: invert(1);
+}
+.elementoLista-navegacion{
+    margin: 0 1rem;
+}
+.linkHeader{
+    text-decoration: none;
+    color:  var(--violetaClaro);
+}
+
+.linkHeader:hover{
+    color:  var(--vielotaMasClaro);
+}
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    min-width: 100%;
+    min-height: 80vh;
+    background-image: url('../media/img/texturaRuido.png');
+
+}
+
+.heroVideo{
+    object-fit: cover;
+    height: 80vh;
+    width: 100%;
+    filter: brightness(50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heroContenido{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Merienda;
+    color: white;
+}
+.tirada{
+    background-image: url('../media/img/texturaRuido.png');
+}
+.titulo-tirada{
+    text-align: center;
+    font-family: EduQLD;
+    font-size: 3.5rem;
+    margin: 0;
+}
+.cards-tirada{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+
+}
+
+.card-carta{
+    border: 4px solid var(--azulOscuro);
+    box-shadow: 6px 6px  black;
+    margin: 1.5rem 0;
+}
+.img-card{
+    height: 20rem;
+    width: 15rem;
+}
+.titulo-card{
+    text-align: center;
+    margin: 0;
+    font-family: EduQLD;
+    font-size: 2rem;
+    background-color: white;
+}
+
+@media screen and (max-width:996px){
+    .cards-tirada{
+        justify-content: center;
+    }
+    .card-carta{
+        margin: .75rem .75rem;
+    }
+}
+@media screen and (max-width:768px){
+    .cards-tirada{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-carta{
+        width: 90%;
+    }
+    .img-card{
+        width: 100%;
+    }
+}
+
+.infoHoroscopo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardHoroscopo{
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.img-horoscopo{
+    height: 40rem;
+    width: 60%;
+}
+.texto-horoscopo{
+    width: 40%
+}
+@media screen and (max-width:768px) {
+    .cardHoroscopo{
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-horoscopo{
+        width: 100%;
+    }
+    .texto-horoscopo{
+        width: 100%;
+        text-align: justify;
+    }
+}
+.piePagina{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    background-color: var(--violetaClaro);
+    margin: 1rem 0 0 0;
+    font-family: EduQLD;
+}
+@media screen and (max-width:996px) {
+    .piePagina{
+        flex-direction: column;
+        align-items: center;
+    }
+}
